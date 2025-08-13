@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Garvit Chahar — Resume</title>
+  <style>
+    :root {
+      --ink: #0f172a;      /* slate-900 */
+      --muted: #475569;    /* slate-600 */
+      --line: #e2e8f0;     /* slate-200 */
+      --accent: #2563eb;   /* blue-600 */
+    }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+                   Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji",
+                   "Segoe UI Emoji";
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.45;
+    }
+    .page {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 32px 40px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(2,6,23,0.06);
+    }
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px 24px;
+      align-items: center;
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: 32px; 
+      letter-spacing: 0.2px; 
+      margin: 0; 
+    }
+    .subtitle { color: var(--muted); font-weight: 600; margin-top: 4px; }
+    .contact { text-align: right; font-size: 14px; color: var(--muted); }
+    .contact a { color: var(--muted); text-decoration: none; }
+    .contact a:hover { color: var(--accent); text-decoration: underline; }
+
+    .sec { margin: 18px 0 8px; }
+    .sec h2 {
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 24px 0 10px;
+    }
+    .item { margin: 8px 0 12px; }
+    .item h3 { margin: 0 0 2px; font-size: 16px; }
+    .item .meta { color: var(--muted); font-size: 14px; }
+
+    ul.clean { list-style: none; padding-left: 0; margin: 8px 0; }
+    ul.tight { margin: 6px 0 0; }
+    .bullets { list-style: disc; padding-left: 18px; margin: 8px 0; }
+
+    .grid {
+      display: grid; 
+      grid-template-columns: 2.2fr 1.2fr; 
+      gap: 24px;
+    }
+
+    .taglist { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { font-size: 13px; border: 1px solid var(--line); padding: 4px 8px; border-radius: 999px; }
+
+    .printbar { display:flex; justify-content:flex-end; margin-top: 10px; }
+    .btn-print {
+      border: 1px solid var(--line); background:#fff; color: var(--ink);
+      padding: 6px 12px; border-radius: 10px; cursor:pointer; font-size: 14px;
+    }
+    .btn-print:hover { border-color: var(--accent); color: var(--accent); }
+
+    @media (max-width: 840px) {
+      .page { margin: 12px; padding: 20px; }
+      header { grid-template-columns: 1fr; text-align: left; }
+      .contact { text-align: left; }
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; border: none; margin: 0; padding: 0; }
+      .printbar { display: none !important; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page" role="document" aria-label="Resume">
+    <header>
+      <div>
+        <h1>Garvit Chahar</h1>
+        <div class="subtitle">3rd Year B.Tech (CSE) • Bennett University</div>
+      </div>
+      <div class="contact">
+        <div>CGPA: 8.4</div>
+        <div>📞 <a href="tel:+918053332626">+91 80533 32626</a></div>
+        <div>✉️ <a href="mailto:garvitsilana176@gmail.com">garvitsilana176@gmail.com</a></div>
+      </div>
+    </header>
+
+    <section class="sec" aria-labelledby="summary">
+      <h2 id="summary">Profile</h2>
+      <p>
+        Motivated Computer Science undergraduate focusing on practical problem‑solving in
+        machine learning and computer networking. Comfortable turning ideas into
+        small, working prototypes and documenting clear, reproducible results.
+      </p>
+    </section>
+
+    <div class="grid">
+      <!-- Left column -->
+      <section>
+        <div class="sec" aria-labelledby="projects">
+          <h2 id="projects">Selected Projects</h2>
+
+          <div class="item">
+            <h3>Real‑time Gun Detection</h3>
+            <div class="meta">Personal project</div>
+            <ul class="bullets">
+              <li>Built a lightweight pipeline to detect firearms in images/video streams and raise alerts.</li>
+              <li>Explored model selection, dataset curation, and evaluation for safety‑critical use cases.</li>
+            </ul>
+            <div class="taglist">
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Object Detection</span>
+              <span class="tag">Python</span>
+              <span class="tag">OpenCV</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>Hotel Network Design</h3>
+            <div class="meta">Academic mini‑project</div>
+            <ul class="bullets">
+              <li>Designed a segmented LAN for a mid‑size hotel covering front‑desk, guest Wi‑Fi, and back‑office.</li>
+              <li>Addressed IP planning, VLAN‑based isolation, basic routing, and security controls.</li>
+            </ul>
+            <div class="taglist">
+              <span class="tag">Networking</span>
+              <span class="tag">VLANs</span>
+              <span class="tag">Subnetting</span>
+              <span class="tag">Routing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec" aria-labelledby="education">
+          <h2 id="education">Education</h2>
+          <div class="item">
+            <h3>B.Tech in Computer Science & Engineering</h3>
+            <div class="meta">Bennett University — 3rd Year • CGPA: 8.4</div>
+            <ul class="tight bullets">
+              <li>Relevant coursework: Data Structures & Algorithms, Computer Networks, Database Systems, Operating Systems, Machine Learning.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right column -->
+      <aside>
+        <div class="sec" aria-labelledby="skills">
+          <h2 id="skills">Skills</h2>
+          <ul class="clean">
+            <li><strong>Programming:</strong> Python, C/C++, Java</li>
+            <li><strong>Web:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Data/ML:</strong> Basics of ML, OpenCV</li>
+            <li><strong>Networking:</strong> IP planning, Subnetting, VLANs, Routing basics</li>
+            <li><strong>Tools:</strong> Git, Linux, VS Code</li>
+          </ul>
+        </div>
+
+        <div class="sec" aria-labelledby="achievements">
+          <h2 id="achievements">Highlights</h2>
+          <ul class="bullets">
+            <li>Hands‑on with building small end‑to‑end prototypes.</li>
+            <li>Comfortable writing clean documentation and reports.</li>
+            <li>Strong fundamentals in CS and networking.</li>
+          </ul>
+        </div>
+
+        <div class="sec" aria-labelledby="extras">
+          <h2 id="extras">Extras</h2>
+          <ul class="bullets">
+            <li>Open to internships and project collaborations.</li>
+            <li>Available for on‑site or remote opportunities.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <div class="printbar">
+      <button class="btn-print" onclick="window.print()" aria-label="Print or save as PDF">Print / Save as PDF</button>
+    </div>
+  </div>
+</body>
+</html>
